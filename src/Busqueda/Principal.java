@@ -172,11 +172,11 @@ public class Principal extends javax.swing.JFrame {
 
     private void btnLinealActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLinealActionPerformed
         // TODO add your handling code here:
-        int dato = Integer.parseInt(txtDato.getText());
+        int BuscarPosicion = Integer.parseInt(txtDato.getText());
       
-        int[] vector = Convertir.ConvertirVectores.AVectorEntero(txtVector.getText());
+        int[] CadenaDeDatos = Convertir.ConvertirVectores.AVectorEntero(txtVector.getText());
        // txtVector.setText(Convertir.ConvertirVectores.ACadena(vector));
-        String indice = BusquedaLinael.busquedaSecuencial(vector,dato);
+        String indice = BusquedaLinael.busquedaSecuencial(CadenaDeDatos,BuscarPosicion);
        ldlResultado.setText(indice);
     }//GEN-LAST:event_btnLinealActionPerformed
 
@@ -190,21 +190,21 @@ public class Principal extends javax.swing.JFrame {
 
     private void BtnBusquedaBinariaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnBusquedaBinariaActionPerformed
         // TODO add your handling code here:
-           int dato = Integer.parseInt(txtDato.getText());
-        int[] vector = Convertir.ConvertirVectores.AVectorEntero(txtVector.getText());
-        txtVector.setText(Convertir.ConvertirVectores.ACadena(vector));
-        int indice =  busquedaBinaria.busquedaBinaria(vector,dato);
+           int BuscarDato = Integer.parseInt(txtDato.getText());
+        int[] CadenaDeDatos = Convertir.ConvertirVectores.AVectorEntero(txtVector.getText());
+        txtVector.setText(Convertir.ConvertirVectores.ACadena(CadenaDeDatos));
+        int indice =  busquedaBinaria.busquedaBinaria(CadenaDeDatos,BuscarDato);
        ldlResultado.setText(Integer.toString(indice));
     }//GEN-LAST:event_BtnBusquedaBinariaActionPerformed
 
     private void btnLineal1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLineal1ActionPerformed
              // TODO add your handling code here:
-        String dato1 = String.valueOf(txtDato.getText());
+        String BuscarDato = String.valueOf(txtDato.getText());
       
-        String[] vector2 = Convertir.ConvertirVectores.EnteroAString(txtVector.getText());
+        String[] CadenaDeCaracteres3 = Convertir.ConvertirVectores.EnteroAString(txtVector.getText());
        // txtVector.setText(Convertir.ConvertirVectores.ACadena(vector));
        
-        String indice = Busqueda.BusquedaLinael.busquedaSecuencial02(vector2,dato1);
+        String indice = Busqueda.BusquedaLinael.busquedaSecuencial02(CadenaDeCaracteres3,BuscarDato);
        ldlResultado.setText(indice);
         
         
@@ -213,9 +213,9 @@ public class Principal extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         String dato = String.valueOf(txtDato.getText());
-        int[] vector = Convertir.ConvertirVectores.AVectorEntero(txtVector.getText());
-         int[] dato1= Convertir.ConvertirVectores.AVectorEntero(dato);
-        String indice1 = Busqueda.busquedaBinaria.busquedaBinaria2(vector,dato1);
+        int[] CadenaCaracteres = Convertir.ConvertirVectores.AVectorEntero(txtVector.getText());
+         int[] CadenaDatosEnteros= Convertir.ConvertirVectores.AVectorEntero(dato);
+        String indice1 = Busqueda.busquedaBinaria.busquedaBinaria2(CadenaCaracteres,CadenaDatosEnteros);
        ldlResultado.setText(indice1);
         
     }//GEN-LAST:event_jButton1ActionPerformed
